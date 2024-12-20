@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidebegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ok_button_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideend"
+        app:layout_constraintStart_toStartOf="@+id/guidebegin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#021764"
+            android:layout_margin="5sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="serif"
+            android:text="Set Date"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="italic|bold"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#4B2FC1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="4sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="4sp"
+                android:layout_marginEnd="4sp"
+                android:layout_marginBottom="4sp"
+                android:layout_weight="1"
+                android:background="#3D4194"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="DAY"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic|bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="4sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="4sp"
+                android:layout_marginEnd="4sp"
+                android:layout_marginBottom="4sp"
+                android:layout_weight="1"
+                android:background="#3D4194"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="Month"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic|bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="4sp"
+                android:layout_marginStart="4sp"
+                android:layout_marginTop="4sp"
+                android:layout_marginEnd="4sp"
+                android:layout_marginBottom="4sp"
+                android:layout_weight="1"
+                android:background="#3D4194"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="Year"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic|bold"
+                tools:ignore="TextSizeCheck" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <NumberPicker
+                android:id="@+id/dayPicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#644AD1"
+                android:solidColor="#243A89" />
+
+            <NumberPicker
+                android:id="@+id/monthPicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#644AD1"
+                android:solidColor="#243A89" />
+
+            <NumberPicker
+                android:id="@+id/yearPicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#644AD1"
+                android:solidColor="#243A89" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ok_button_background"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="OK"
+            android:layout_margin="5sp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            app:backgroundTint="#021867" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

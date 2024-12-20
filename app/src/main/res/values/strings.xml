@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">N.I.C.</string>
+    <string name="DateFormat">DD-MM-YYYY</string>
+    <string name="Amount">0.0</string>
+    <string name="Common_Rate">2%</string>
+    <string name="Loan_Date"> From *</string>
+    <string name="Repay_Date">To </string>
+    <string name="bufferdays">Buffer Days</string>
+    <string name="rate_of_int">Rate of Interest</string>
+    <string name="loan_amount">Amount *</string>
+    <string name="Received_amount">Received Amount</string>
+    <string name="Interest">Interest</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="Add_New_Row_P">Add New Payment Row</string>
+    <string name="Add_New_Row_R">Add New Receive Row</string>
+    <string name="Del_Last_Row_P">Delete Last Payment Row</string>
+    <string name="Del_Last_Row_R">Delete Last Receive Row</string>
+    <string name="Buff_Hint">0</string>
+    <string name="Calculate_Interest">Calculate</string>
+    <string name="nil">Nil</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="NEW_ROW">#2D1146</color>
+    <color name="hint_color">#78909C</color>
+    <color name="Interest_Color">#2CEF7D</color>
+    <color name="app_bar">#230162</color>
+    <color name="Net_Amount">#AEEA00</color>
+    <color name="Calculate_button">#18FEFE</color>
+    <color name="Table_headings">#8D194C</color>
+    <color name="App_Background">#10071D</color>
+</resources>

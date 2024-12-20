@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/App_Background"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/appbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".67" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="#F50057"-->
+<!--        android:clickable="false"-->
+<!--        android:orientation="horizontal">-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/App_Logo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:paddingTop="3sp"-->
+<!--            app:srcCompat="@drawable/niclogo" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/App_Name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginEnd="20sp"-->
+<!--            android:layout_weight="5"-->
+<!--            android:fontFamily="@font/akaya_telivigala"-->
+<!--            android:gravity="end"-->
+<!--            android:paddingTop="15sp"-->
+<!--            android:text="@string/app_name"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="48sp"-->
+<!--            android:textStyle="bold|italic" />-->
+
+<!--    </LinearLayout>-->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/Payment_Add"
+                    android:layout_width="40dp"
+                    android:layout_height="51dp"
+                    android:background="#0010071D"
+                    android:contentDescription='@string/Add_New_Row_P'
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline1"
+                    app:srcCompat="@android:drawable/ic_input_add"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center|start|end"
+                    android:text="@string/payment_amount"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageButton
+                    android:id="@+id/Payment_Del"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:background="#00FAFAFA"
+                    android:contentDescription="@string/Del_Last_Row_P"
+                    app:srcCompat="@android:drawable/ic_delete"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TableLayout
+                    android:id="@+id/Payment_Table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Table_headings"
+                        android:baselineAligned="true">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Loan_Date"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/loan_amount"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Repay_Date"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/rate_of_int"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/bufferdays"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Interest"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/NEW_ROW"
+                        android:baselineAligned="true">
+
+                        <EditText
+                            android:id="@+id/CD1"
+                            android:layout_width="141dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:hint="@string/DateFormat"
+                            android:inputType="date"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic"
+                            tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+                        <EditText
+                            android:id="@+id/L1"
+                            android:layout_width="148dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:hint="@string/Amount"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic"
+                            tools:ignore="DuplicateSpeakableTextCheck" />
+
+                        <EditText
+                            android:id="@+id/DD1"
+                            android:layout_width="139dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:hint="@string/DateFormat"
+                            android:inputType="date"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/r1"
+                            android:layout_width="71dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:hint="@string/Common_Rate"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic"
+                            tools:ignore="DuplicateSpeakableTextCheck" />
+
+                        <EditText
+                            android:id="@+id/Buff1"
+                            android:layout_width="62dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:importantForAccessibility="auto"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic"
+                            tools:ignore="Autofill,HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/I1"
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/Interest_Color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </TableRow>
+
+                    <!-- rows will be added dynamically here -->
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/SumTotal_Payment"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:text="@string/Calculate_Interest"
+                    android:textColor="#021652"
+                    app:backgroundTint="@color/Calculate_button"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:id="@+id/Display_Total_PAY_Interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/crimson_text_semibold_italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/Receive_Add"
+                    android:layout_width="40dp"
+                    android:layout_height="51dp"
+                    android:background="#00801212"
+                    android:contentDescription='@string/Add_New_Row_R'
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline1"
+                    app:srcCompat="@android:drawable/ic_input_add"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center|start|end"
+                    android:text="@string/Received_amount"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageButton
+                    android:id="@+id/Receive_Del"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/Del_Last_Row_R"
+                    app:srcCompat="@android:drawable/ic_delete"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TableLayout
+                    android:id="@+id/Receive_Table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/Table_headings">
+
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Loan_Date"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/Recieved_amount"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Received_amount"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Repay_Date"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/rate_of_int"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/reggae_one"
+                            android:gravity="center"
+                            android:text="@string/Interest"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/NEW_ROW">
+
+
+                        <EditText
+                            android:id="@+id/CDR1"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:hint="@string/DateFormat"
+                            android:importantForAccessibility="yes"
+                            android:inputType="date"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/R1"
+                            android:layout_width="134dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:hint="@string/Amount"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/DDR1"
+                            android:layout_width="148dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:hint="@string/DateFormat"
+                            android:inputType="date"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/roiR1"
+                            android:layout_width="75dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:hint="@string/Common_Rate"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/IonR1"
+                            android:layout_width="136dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/Interest_Color"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </TableRow>
+
+                    <!-- rows will be added dynamically here -->
+
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/SumTotal_Received"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:text="@string/Calculate_Interest"
+                    android:textColor="#021652"
+                    app:backgroundTint="@color/Calculate_button" />
+
+                <TextView
+                    android:id="@+id/Display_Total_RECEIVE_Interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/crimson_text_semibold_italic" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <TextView
+        android:id="@+id/Display_Hisab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/crimson_text_semibold_italic"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#09B6B0"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/GuideRes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/Hisaab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Net Amount"
+        app:backgroundTint="@color/Net_Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/GuideRes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
